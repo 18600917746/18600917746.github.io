@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="18600917746.github.io/"/>
-  <updated>2019-02-18T07:44:55.133Z</updated>
+  <updated>2019-02-20T10:59:13.961Z</updated>
   <id>18600917746.github.io/</id>
   
   <author>
@@ -15,6 +15,89 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hello-pm2</title>
+    <link href="18600917746.github.io/2019/02/20/hello-pm2/"/>
+    <id>18600917746.github.io/2019/02/20/hello-pm2/</id>
+    <published>2019-02-20T10:57:23.000Z</published>
+    <updated>2019-02-20T10:59:13.961Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="pm2"><a href="#pm2" class="headerlink" title="pm2"></a><a href="https://pm2.io/doc/zh/runtime/overview/" target="_blank" rel="noopener"><code>pm2</code></a></h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;pm2&quot;&gt;&lt;a href=&quot;#pm2&quot; class=&quot;headerlink&quot; title=&quot;pm2&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://pm2.io/doc/zh/runtime/overview/&quot; target=&quot;_blank&quot; rel=&quot;noopen
+      
+    
+    </summary>
+    
+      <category term="后端" scheme="18600917746.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+      <category term="hello" scheme="18600917746.github.io/categories/%E5%90%8E%E7%AB%AF/hello/"/>
+    
+    
+      <category term="pm2" scheme="18600917746.github.io/tags/pm2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hello-sort</title>
+    <link href="18600917746.github.io/2019/02/20/hello-sort/"/>
+    <id>18600917746.github.io/2019/02/20/hello-sort/</id>
+    <published>2019-02-20T07:32:54.000Z</published>
+    <updated>2019-02-20T07:51:37.715Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="常见的十类排序"><a href="#常见的十类排序" class="headerlink" title="常见的十类排序"></a><a href="https://www.cnblogs.com/onepixel/p/7674659.html" target="_blank" rel="noopener">常见的十类排序</a></h2><h3 id="数组对象排序"><a href="#数组对象排序" class="headerlink" title="数组对象排序"></a>数组对象排序</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 测试数据</span></span><br><span class="line"><span class="keyword">let</span> arr = [</span><br><span class="line">    &#123;</span><br><span class="line">      id: <span class="number">1</span>,</span><br><span class="line">      name: <span class="string">'李四'</span>,</span><br><span class="line">    &#125;, &#123;</span><br><span class="line">      id: <span class="number">2</span>,</span><br><span class="line">      name: <span class="string">'王五'</span>,</span><br><span class="line">    &#125;, &#123;</span><br><span class="line">      id: <span class="number">3</span>,</span><br><span class="line">      name: <span class="string">'张三'</span>,</span><br><span class="line">    &#125;];</span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 自定义方法</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">objsort</span>(<span class="params">list</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">obj1, obj2</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="keyword">typeof</span> obj1[list] == <span class="string">'string'</span> || <span class="keyword">typeof</span> obj2[list] == <span class="string">'string'</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> obj1[list].localeCompare(obj2[list], <span class="string">'zh'</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> obj1[list] - obj2[list];</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  arr.sort(objsort(<span class="string">'name'</span>));</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;常见的十类排序&quot;&gt;&lt;a href=&quot;#常见的十类排序&quot; class=&quot;headerlink&quot; title=&quot;常见的十类排序&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://www.cnblogs.com/onepixel/p/7674659.html&quot; target=
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="hello" scheme="18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/hello/"/>
+    
+    
+      <category term="sort" scheme="18600917746.github.io/tags/sort/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>那些听起来高大上的单词缩写</title>
+    <link href="18600917746.github.io/2019/02/20/%E9%82%A3%E4%BA%9B%E5%90%AC%E8%B5%B7%E6%9D%A5%E9%AB%98%E5%A4%A7%E4%B8%8A%E7%9A%84%E5%8D%95%E8%AF%8D%E7%BC%A9%E5%86%99/"/>
+    <id>18600917746.github.io/2019/02/20/那些听起来高大上的单词缩写/</id>
+    <published>2019-02-20T07:00:35.000Z</published>
+    <updated>2019-02-20T07:53:16.952Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><ul><li>BFC block formatting context 块格式化上下文</li><li>IFC inline formatting context 内联格式化上下文</li><li>GFC gridLayout formatting context 网格布局格式化上下文</li><li>FFC flex formatting context 自适应格式化上下文</li></ul><h2 id="管理系统"><a href="#管理系统" class="headerlink" title="管理系统"></a>管理系统</h2><ul><li>ERP系统 Enterprise Resource Planning 企业资源计划</li><li>MRP系统 Material Requirement Planning 物资需求计划</li></ul><h2 id="前端框架"><a href="#前端框架" class="headerlink" title="前端框架"></a>前端框架</h2><ul><li>Vue <ul><li>是一个用于创建用户界面的开源JavaScript框架，也是一个创建<code>单页面应用</code>的<code>Web应用框架</code>。</li></ul></li><li>React<ul><li>一个为数据提供渲染为HTML视图的开源JavaScript 库。</li></ul></li></ul><h2 id="页面结构类型"><a href="#页面结构类型" class="headerlink" title="页面结构类型"></a>页面结构类型</h2><ul><li>SPA single-page application 单页面应用</li><li>MPA 多页面应用</li></ul><h2 id="页面渲染方式"><a href="#页面渲染方式" class="headerlink" title="页面渲染方式"></a>页面渲染方式</h2><ul><li>SSR Server Side Render 服务端渲染<ul><li>一般通常来说web页面的数据渲染都是客户端或者浏览器端来完成的，先从服务器请求到页面，载通过ajax请求到页面数据再把相应的数据填充到template模板形成完整的页面呈现给用户。服务端渲染把数据的ajax请求放在了服务端，然后服务端把数据填充到template模板形成完整的页面。然后服务端把渲染的完整的页面吐给客户端。这样减少了一次客户端到服务端的一次http请求，加快相应速度，一般用于首屏的性能优化。</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;CSS&quot;&gt;&lt;a href=&quot;#CSS&quot; class=&quot;headerlink&quot; title=&quot;CSS&quot;&gt;&lt;/a&gt;CSS&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;BFC block formatting context 块格式化上下文&lt;/li&gt;
+&lt;li&gt;IFC inline for
+      
+    
+    </summary>
+    
+      <category term="茶余饭后" scheme="18600917746.github.io/categories/%E8%8C%B6%E4%BD%99%E9%A5%AD%E5%90%8E/"/>
+    
+      <category term="文章" scheme="18600917746.github.io/categories/%E8%8C%B6%E4%BD%99%E9%A5%AD%E5%90%8E/%E6%96%87%E7%AB%A0/"/>
+    
+    
+      <category term="名词解释" scheme="18600917746.github.io/tags/%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/"/>
+    
+  </entry>
   
   <entry>
     <title>hello-typescript</title>
@@ -112,9 +195,9 @@
     <link href="18600917746.github.io/2019/02/12/hello-nginx/"/>
     <id>18600917746.github.io/2019/02/12/hello-nginx/</id>
     <published>2019-02-12T02:46:59.000Z</published>
-    <updated>2019-02-12T03:33:43.638Z</updated>
+    <updated>2019-02-20T10:54:54.774Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>为什么使用 <code>Nginx</code></p></blockquote><p>Nginx是一款轻量级的HTTP服务器，采用事件驱动的异步非阻塞处理方式框架，这让其具有极好的IO性能，时常用于服务端的反向代理和负载均衡。</p><h2 id="1-初识Nginx和环境准备"><a href="#1-初识Nginx和环境准备" class="headerlink" title="1.初识Nginx和环境准备"></a>1.初识Nginx和环境准备</h2><ul><li>需要一台闲置的电脑当成主机</li><li>购买阿里云ECS</li><li>安装虚拟机</li></ul><blockquote><p>Nginx的快速搭建，安装依赖</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install gcc gcc-c++ autoconf pcre-devel make automake</span><br><span class="line">yum -y install wget httpd-tools vim</span><br></pre></td></tr></table></figure><blockquote><p>根据自己的喜好创建目录</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- root</span><br><span class="line">    - apps   </span><br><span class="line">        - app 程序主目录</span><br><span class="line">        - logs 日志目录</span><br><span class="line">        - download 下载目录</span><br><span class="line">        - work 文档说明目录</span><br><span class="line">        - backup 备份目录</span><br></pre></td></tr></table></figure><h2 id="2-Nginx的快速搭建"><a href="#2-Nginx的快速搭建" class="headerlink" title="2.Nginx的快速搭建"></a>2.Nginx的快速搭建</h2><ul><li>查看最新稳定的版本是多少</li><li>使用 <code>yum list | grep nginx</code> 查看服务器 <code>ynm</code> 源支持的版本是多少，如果没有最新的，自行修改 <code>ynm</code> 源地址</li><li>使用 <code>npm install nginx</code> 安装 <code>nginx</code> </li><li><p>使用 <code>nginx -v</code> 查看是否安装成功与版本 </p><blockquote><p>修改 <code>ynm</code> 源地址的教程</p></blockquote></li><li><p>创建配置文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/yum.repos.d/nginx.repo</span><br></pre></td></tr></table></figure></li><li><p>编写对应系统配置信息</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[nginx]</span><br><span class="line">name=nginx repo</span><br><span class="line">baseurl=http://nginx.org/packages/centos/7/$basearch/</span><br><span class="line">gpgcheck=0</span><br><span class="line">enabled=1</span><br></pre></td></tr></table></figure></li></ul><h2 id="3-Nginx基本配置文件详讲"><a href="#3-Nginx基本配置文件详讲" class="headerlink" title="3.Nginx基本配置文件详讲"></a>3.Nginx基本配置文件详讲</h2>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>为什么使用 <code>Nginx</code></p></blockquote><p>Nginx是一款轻量级的HTTP服务器，采用事件驱动的异步非阻塞处理方式框架，这让其具有极好的IO性能，时常用于服务端的反向代理和负载均衡。</p><h2 id="1-初识Nginx和环境准备"><a href="#1-初识Nginx和环境准备" class="headerlink" title="1.初识Nginx和环境准备"></a>1.初识Nginx和环境准备</h2><ul><li>需要一台闲置的电脑当成主机</li><li>购买阿里云ECS</li><li>安装虚拟机</li></ul><blockquote><p>Nginx的快速搭建，安装依赖</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install gcc gcc-c++ autoconf pcre-devel make automake</span><br><span class="line">yum -y install wget httpd-tools vim</span><br></pre></td></tr></table></figure><blockquote><p>根据自己的喜好创建目录</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- root</span><br><span class="line">    - apps   </span><br><span class="line">        - app 程序主目录</span><br><span class="line">        - logs 日志目录</span><br><span class="line">        - download 下载目录</span><br><span class="line">        - work 文档说明目录</span><br><span class="line">        - backup 备份目录</span><br></pre></td></tr></table></figure><h2 id="2-Nginx的快速搭建"><a href="#2-Nginx的快速搭建" class="headerlink" title="2.Nginx的快速搭建"></a>2.Nginx的快速搭建</h2><ul><li>查看最新稳定的版本是多少</li><li>使用 <code>yum list | grep nginx</code> 查看服务器 <code>ynm</code> 源支持的版本是多少，如果没有最新的，自行修改 <code>ynm</code> 源地址</li><li>使用 <code>npm install nginx</code> 安装 <code>nginx</code> </li><li><p>使用 <code>nginx -v</code> 查看是否安装成功与版本 </p><blockquote><p>修改 <code>ynm</code> 源地址的教程</p></blockquote></li><li><p>创建配置文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/yum.repos.d/nginx.repo</span><br></pre></td></tr></table></figure></li><li><p>编写对应系统配置信息</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[nginx]</span><br><span class="line">name=nginx repo</span><br><span class="line">baseurl=http://nginx.org/packages/centos/7/$basearch/</span><br><span class="line">gpgcheck=0</span><br><span class="line">enabled=1</span><br></pre></td></tr></table></figure></li></ul><h2 id="3-Nginx基本配置文件详讲"><a href="#3-Nginx基本配置文件详讲" class="headerlink" title="3.Nginx基本配置文件详讲"></a>3.Nginx基本配置文件详讲</h2><h2 id="Nginx的反向代理与负载均衡"><a href="#Nginx的反向代理与负载均衡" class="headerlink" title="Nginx的反向代理与负载均衡"></a>Nginx的反向代理与负载均衡</h2><p>反向代理：<br>负载均衡</p><h2 id="部署-node-代码上线步骤"><a href="#部署-node-代码上线步骤" class="headerlink" title="部署 node 代码上线步骤"></a>部署 node 代码上线步骤</h2><ol><li>安装 <a href="https://brew.sh/index_zh-cn" target="_blank" rel="noopener"><code>brew</code> </a></li><li>搜索 <code>Nginx</code> <ul><li><code>brew search nginx</code></li><li><code>brew install nginx</code></li></ul></li><li>查看 <code>Nginx</code> 文档<ul><li><code>brew info nginx</code></li></ul></li><li>启动 <code>sudo brew services start nginx（端口默认是8090）</code></li></ol><h2 id="前端需要给-运维的-nginx-配置文件"><a href="#前端需要给-运维的-nginx-配置文件" class="headerlink" title="前端需要给 运维的 nginx 配置文件"></a>前端需要给 运维的 nginx 配置文件</h2><ul><li>ip_hash: 固定用户请求地址，下次不进行均衡。</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">worker_processes 4;</span><br><span class="line">events&#123;</span><br><span class="line">    worker_connections 1024;</span><br><span class="line">&#125;</span><br><span class="line">http&#123;</span><br><span class="line">    upstream firsttest&#123;</span><br><span class="line">        //是否开启 ip_hash  </span><br><span class="line">        //ip_hash;</span><br><span class="line">        //是否开启权重问题</span><br><span class="line">        //server xxx.xx.xxx weight=2; </span><br><span class="line">        //server xxx.xx.xxx weight=1; </span><br><span class="line">        server xxx.xx.xxx;</span><br><span class="line">        server xxx.xx.xxx;</span><br><span class="line">    &#125;</span><br><span class="line">    server&#123;</span><br><span class="line">        listen 8080;</span><br><span class="line">        location / &#123;</span><br><span class="line">            proxy_pass http://firsttest;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="pm2-json-配置"><a href="#pm2-json-配置" class="headerlink" title="pm2.json 配置"></a>pm2.json 配置</h2><ul><li>pm2<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"apps"</span>:[&#123;</span><br><span class="line">    <span class="attr">"name"</span>:<span class="string">"xxxx"</span>,</span><br><span class="line">    <span class="attr">"script"</span>:<span class="string">"app.js"</span>,</span><br><span class="line">    <span class="attr">"error_file"</span>:<span class="string">"xxxx.log"</span>,</span><br><span class="line">    <span class="attr">"out_file"</span>:<span class="string">"xxx.log"</span></span><br><span class="line">  &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul>]]></content>
     
     <summary type="html">
     
@@ -434,7 +517,7 @@
     <link href="18600917746.github.io/2019/01/22/hello-indexDB/"/>
     <id>18600917746.github.io/2019/01/22/hello-indexDB/</id>
     <published>2019-01-22T10:51:07.000Z</published>
-    <updated>2019-01-28T03:53:52.537Z</updated>
+    <updated>2019-02-20T08:25:30.590Z</updated>
     
     <summary type="html">
     
@@ -446,95 +529,6 @@
     
     
       <category term="indexDB" scheme="18600917746.github.io/tags/indexDB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>super-html</title>
-    <link href="18600917746.github.io/2019/01/22/super-html/"/>
-    <id>18600917746.github.io/2019/01/22/super-html/</id>
-    <published>2019-01-22T09:23:24.000Z</published>
-    <updated>2019-01-28T04:01:29.022Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="在-webapp-中使用-img-来实现用户手机网速的测试"><a href="#在-webapp-中使用-img-来实现用户手机网速的测试" class="headerlink" title="在 webapp 中使用 img 来实现用户手机网速的测试"></a>在 webapp 中使用 img 来实现用户手机网速的测试</h3><ul><li>请求一个指定大小的 img 文件</li><li>定义一个当前时间</li><li>在 img onload 触犯函数内定义 img 加载完毕的时间</li><li>二者相减等到 加载事件/文件大小 就能得到用户的网速</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">setInterval(<span class="string">"getSpeed()"</span>, <span class="number">1000</span>);</span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">getSpeed</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   <span class="keyword">var</span> startTime = <span class="keyword">new</span> <span class="built_in">Date</span>().getTime();</span><br><span class="line">   <span class="keyword">var</span> img = <span class="keyword">new</span> Image();</span><br><span class="line">   img.src = <span class="string">"http://www.haosailbio.com/content/images/thumbs/default-image_600.png?timeStamp="</span> + startTime;</span><br><span class="line">   img.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">     <span class="comment">// 图片大小</span></span><br><span class="line">     <span class="keyword">var</span> size = <span class="number">600</span> * <span class="number">1000</span>;</span><br><span class="line">     <span class="keyword">var</span> endTime = <span class="keyword">new</span> <span class="built_in">Date</span>().getTime();</span><br><span class="line">     <span class="keyword">var</span> speed = <span class="built_in">parseInt</span>(size / (endTime - startTime));</span><br><span class="line">     <span class="keyword">var</span> unit = <span class="string">"KB/S"</span>;</span><br><span class="line">     <span class="keyword">if</span>(speed &gt;= <span class="number">1024</span>)&#123;</span><br><span class="line">       speed = (speed / <span class="number">1024</span>).toFixed(<span class="number">2</span>);</span><br><span class="line">       unit = <span class="string">"MB/S"</span>;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="built_in">document</span>.getElementById(<span class="string">"box"</span>).innerHTML = <span class="string">"当前带宽："</span>+ speed + unit + <span class="string">"&lt;br/&gt;请求用时："</span> + (endTime - startTime) / <span class="number">1000</span> + <span class="string">"s"</span>;</span><br><span class="line">   &#125;;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;在-webapp-中使用-img-来实现用户手机网速的测试&quot;&gt;&lt;a href=&quot;#在-webapp-中使用-img-来实现用户手机网速的测试&quot; class=&quot;headerlink&quot; title=&quot;在 webapp 中使用 img 来实现用户手机网速的测试&quot;&gt;&lt;/a
-      
-    
-    </summary>
-    
-      <category term="前端" scheme="18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="super" scheme="18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/super/"/>
-    
-    
-      <category term="html" scheme="18600917746.github.io/tags/html/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hello-linux</title>
-    <link href="18600917746.github.io/2019/01/22/hello-linux/"/>
-    <id>18600917746.github.io/2019/01/22/hello-linux/</id>
-    <published>2019-01-22T07:34:01.000Z</published>
-    <updated>2019-01-28T08:14:46.679Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="vi"><a href="#vi" class="headerlink" title="vi"></a>vi</h3><ul><li>vi 实现文件内容定位</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在 vi 只读模式下输入 `/` 输入检索字段，回车确认</span><br></pre></td></tr></table></figure><h3 id="服务器管理命令"><a href="#服务器管理命令" class="headerlink" title="服务器管理命令"></a>服务器管理命令</h3><ul><li>systemctl  【.service后缀可以省略】<ul><li>systemctl status &lt;name> 查看某服务的状态</li><li>systemctl start &lt;name> 启动某服务</li><li>systemctl stop &lt;name> 停止某服务</li><li>systemctl restart &lt;name> 重启某服务</li><li>systemctl list-units –type=service 查看所有已经启动的服务</li><li>systemctl enable &lt;name> 自动启动某服务</li><li>systemctl disable &lt;name> 某服务不会自动启动</li></ul></li></ul><h3 id="网络管理命令"><a href="#网络管理命令" class="headerlink" title="网络管理命令"></a>网络管理命令</h3><h3 id="URL下载文件"><a href="#URL下载文件" class="headerlink" title="URL下载文件"></a>URL下载文件</h3><ul><li>wget命令用来从指定的<code>URL下载文件</code>。wget非常稳定，它在带宽很窄的情况下和不稳定网络中有很强的适应性，如果是由于网络的原因下载失败，wget会不断的尝试，直到整个文件下载完毕。如果是服务器打断下载过程，它会再次联到服务器上从停止的地方继续下载。这对从那些限定了链接时间的服务器上下载大文件非常有用。</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget(选项)(参数)</span><br></pre></td></tr></table></figure><table><thead><tr><th>参数</th><th>描述</th></tr></thead><tbody><tr><td>-a&lt;日志文件&gt;</td><td>在指定的日志文件中记录资料的执行过程</td></tr><tr><td>-A&lt;后缀名&gt;</td><td>指定要下载文件的后缀名，多个后缀名之间使用逗号进行分隔</td></tr><tr><td>-b</td><td>进行后台的方式运行wget</td></tr><tr><td>-B&lt;连接地址&gt;</td><td>设置参考的连接地址的基地地址</td></tr><tr><td>-c</td><td>继续执行上次终端的任务</td></tr><tr><td>-C&lt;标志&gt;</td><td>设置服务器数据块功能标志on为激活，off为关闭，默认值为on</td></tr><tr><td>-d</td><td>调试模式运行指令</td></tr><tr><td>-D&lt;域名列表&gt;</td><td>设置顺着的域名列表，域名之间用“，”分隔</td></tr><tr><td>-e&lt;指令&gt;</td><td>作为文件“.wgetrc”中的一部分执行指定的指令</td></tr><tr><td>-h</td><td>显示指令帮助信息</td></tr><tr><td>-i&lt;文件&gt;</td><td>从指定文件获取要下载的URL地址</td></tr><tr><td>-l&lt;目录列表&gt;</td><td>设置顺着的目录列表，多个目录用“，”分隔</td></tr><tr><td>-L</td><td>仅顺着关联的连接</td></tr><tr><td>-r</td><td>递归下载方式</td></tr><tr><td>-nc</td><td>文件存在时，下载文件不覆盖原有文件</td></tr><tr><td>-nv</td><td>下载时只显示更新和出错信息，不显示指令的详细执行过程</td></tr><tr><td>-q</td><td>不显示指令执行过程</td></tr><tr><td>-nh</td><td>不查询主机名称</td></tr><tr><td>-v</td><td>显示详细执行过程</td></tr><tr><td>-V</td><td>显示版本信息</td></tr><tr><td>–passive-ftp</td><td>使用被动模式PASV连接FTP服务器</td></tr><tr><td>–follow-ftp</td><td>从HTML文件中下载FTP连接文件。</td></tr></tbody></table><h3 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h3><table><thead><tr><th>快捷键</th><th>说明</th></tr></thead><tbody><tr><td>ctrl + c</td><td>进程中止</td></tr><tr><td>ctrl + d</td><td>结束输入或退出shell</td></tr><tr><td>ctrl + s</td><td>暂停屏幕输出</td></tr><tr><td>ctrl + q</td><td>恢复屏幕输出</td></tr><tr><td>ctrl + l</td><td>清空屏幕</td></tr><tr><td>ctrl + u</td><td>清空当前输入行</td></tr><tr><td>ctrl + a/e</td><td>光标跳转到首/尾</td></tr></tbody></table>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;vi&quot;&gt;&lt;a href=&quot;#vi&quot; class=&quot;headerlink&quot; title=&quot;vi&quot;&gt;&lt;/a&gt;vi&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;vi 实现文件内容定位&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;t
-      
-    
-    </summary>
-    
-      <category term="后端" scheme="18600917746.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-      <category term="hello" scheme="18600917746.github.io/categories/%E5%90%8E%E7%AB%AF/hello/"/>
-    
-    
-      <category term="linux" scheme="18600917746.github.io/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>node.js与io.js</title>
-    <link href="18600917746.github.io/2019/01/21/node-js%E4%B8%8Eio-js/"/>
-    <id>18600917746.github.io/2019/01/21/node-js与io-js/</id>
-    <published>2019-01-21T06:23:08.000Z</published>
-    <updated>2019-01-21T06:32:57.811Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li>虽然现在node的版本已经到了<code>10+</code>，但是小伙伴们知道node发展时的一些趣事吗；</li></ul><h3 id="iojs和node-js到底有啥恩怨情仇？"><a href="#iojs和node-js到底有啥恩怨情仇？" class="headerlink" title="iojs和node.js到底有啥恩怨情仇？"></a>iojs和node.js到底有啥恩怨情仇？</h3><p>因为<code>node</code>半道分家了。 最初刚火由<code>Joyent</code>资助并推动的，创始人<code>Ryan Dahl</code>加入<code>Joyent</code>全职负责<code>Node.js</code>的发展，基本上是公司把<code>node</code>买下来了。<br>开始一切很好，公司出钱出力，推动<code>node</code>发展，基本不干涉社区发展，社区辅助作者提交核心代码，尽心尽力完善<code>npm</code>模块。</p><p>时间长了就有矛盾了，经过一段时间后<code>node</code>的核心代码更新渐渐慢了，同时渐渐变得保守，发展以稳定可靠为主。而社区的人们更希望能引入新特性，紧随前沿趋势变化。</p><p>最后闹得越来越僵，期间还有什么 “人称代词事件” 的发生让更多人选择放弃了，许多<code>node</code>社区大神都撤了，一部分选择<code>go</code>之类的其他语言了。</p><p>还有一部分则选择做他们自己想法中的<code>node</code>，最后因为商标问题最终他们将名字定为<code>io.js</code>。</p><p>然后就开始了各自的版本，<code>node.js</code>依旧比较慢，在 <code>0.1X.x</code> 奋斗，<code>io.js</code>则基本保持周更，<code>1.0</code>很快就出来了。</p><p>后来<code>Joyent</code>决定与<code>o.js</code>和解。成立<code>node.js</code>基金会，将<code>node.js</code>迁移到基金会管理，然后就和<code>io.js</code>商讨合并，然而<code>io.js</code>更新飞快，谈合并期间 <code>2.0</code> 版本也出来了。<br>最后和解达成，<code>io.js</code> 发布声明 <code>3.0</code> 将是 <code>io.js</code> 的最后一个大版本。</p><p>所以合并后就是<code>4.0</code>作为新一代<code>node</code>的版本号，大概情况如下。</p><p>0.x ————-1.x ————– 2.x ———— 3.x ————– 4.x<br>node.js ——-io.js ————- io.js ———–io.js ———–node.js+io.js</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ul&gt;
-&lt;li&gt;虽然现在node的版本已经到了&lt;code&gt;10+&lt;/code&gt;，但是小伙伴们知道node发展时的一些趣事吗；&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;iojs和node-js到底有啥恩怨情仇？&quot;&gt;&lt;a href=&quot;#iojs和node-js到底有啥恩怨情仇？&quot; c
-      
-    
-    </summary>
-    
-      <category term="前端" scheme="18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="node.js" scheme="18600917746.github.io/tags/node-js/"/>
-    
-      <category term="io.js" scheme="18600917746.github.io/tags/io-js/"/>
-    
-      <category term="茶余饭后" scheme="18600917746.github.io/tags/%E8%8C%B6%E4%BD%99%E9%A5%AD%E5%90%8E/"/>
     
   </entry>
   
