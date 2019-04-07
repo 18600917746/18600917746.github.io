@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>18600917746.github.io/2019/01/21/hello-koa2/</loc>
+    
+    <lastmod>2019-04-07T08:14:45.535Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>18600917746.github.io/2019/01/19/hello-express/</loc>
     
-    <lastmod>2019-04-07T03:03:01.884Z</lastmod>
+    <lastmod>2019-04-07T07:11:23.282Z</lastmod>
     
   </url>
   
@@ -236,13 +243,6 @@
     <loc>18600917746.github.io/2019/01/28/super-git/</loc>
     
     <lastmod>2019-01-28T03:59:06.628Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>18600917746.github.io/2019/01/21/hello-koa2/</loc>
-    
-    <lastmod>2019-01-28T03:54:01.040Z</lastmod>
     
   </url>
   
