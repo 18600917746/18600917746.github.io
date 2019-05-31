@@ -5,9 +5,9 @@
   <subtitle>腹有诗书气自华</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="18600917746.github.io/"/>
-  <updated>2019-05-23T07:36:45.963Z</updated>
-  <id>18600917746.github.io/</id>
+  <link href="https://18600917746.github.io/"/>
+  <updated>2019-05-31T06:25:33.109Z</updated>
+  <id>https://18600917746.github.io/</id>
   
   <author>
     <name>[object Object]</name>
@@ -17,58 +17,161 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hello-小程序</title>
-    <link href="18600917746.github.io/2019/05/23/hello-%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    <id>18600917746.github.io/2019/05/23/hello-小程序/</id>
-    <published>2019-05-23T07:35:43.000Z</published>
-    <updated>2019-05-23T07:36:45.963Z</updated>
+    <title>hello-flutter-http</title>
+    <link href="https://18600917746.github.io/2019/05/30/hello-flutter-http/"/>
+    <id>https://18600917746.github.io/2019/05/30/hello-flutter-http/</id>
+    <published>2019-05-30T09:46:00.000Z</published>
+    <updated>2019-05-31T06:25:33.109Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="原生走一波"><a href="#原生走一波" class="headerlink" title="原生走一波"></a>原生走一波</h3>]]></content>
+    <content type="html"><![CDATA[<h3 id="使用第三方库"><a href="#使用第三方库" class="headerlink" title="使用第三方库"></a>使用第三方库</h3><p><a href="https://pub.dev/" target="_blank" rel="noopener">https://pub.dev/</a></p><h3 id="快速生成实体类："><a href="#快速生成实体类：" class="headerlink" title="快速生成实体类："></a>快速生成实体类：</h3><p><a href="https://app.quicktype.io/" target="_blank" rel="noopener">https://app.quicktype.io/</a></p><h3 id="http-http-dart"><a href="#http-http-dart" class="headerlink" title="http/http.dart"></a>http/http.dart</h3><blockquote><p>package:http/http.dart 是一个开源的基于 Flutter 的网络请求框架。</p></blockquote><ul><li><p>使用 http/http.dart 库之前，我们需要先在 pubspec.yaml 文件中添加改库的依赖：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">dependencies:</span></span><br><span class="line"><span class="attr">  http:</span> <span class="string">^0.12.0+1</span></span><br></pre></td></tr></table></figure></li><li><p>然后在项目的根目录使用如下命令安装该库：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">flutter</span> <span class="string">packages</span> <span class="string">get</span></span><br></pre></td></tr></table></figure></li><li><p>最后，在项目中需要使用的地方引入该库：</p><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'package:http/http.dart'</span>;</span><br></pre></td></tr></table></figure></li><li><p>或者使用别名的引用方式：</p><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'package:http/http.dart'</span> <span class="keyword">as</span> http;</span><br></pre></td></tr></table></figure></li></ul><h3 id="get-请求"><a href="#get-请求" class="headerlink" title="get 请求"></a><code>get</code> 请求</h3><ul><li>使用 <code>http/http.dart</code> 发送 <code>GET</code> 请求的实例代码如下：</li></ul><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'dart:convert'</span> <span class="keyword">as</span> convert;</span><br><span class="line"><span class="keyword">import</span> <span class="string">'package:http/http.dart'</span> <span class="keyword">as</span> http;</span><br><span class="line"></span><br><span class="line">httpRequestGet() <span class="keyword">async</span> &#123;</span><br><span class="line">  <span class="keyword">var</span> url = <span class="string">'http://tj.nineton.cn/Heart/index/all?city=CHSH000000&amp;language=zh-chs'</span>;</span><br><span class="line">  http.Response response = <span class="keyword">await</span> http.<span class="keyword">get</span>(url);</span><br><span class="line">  <span class="keyword">if</span> (response.statusCode == <span class="number">200</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> jsonResponse = convert.jsonDecode(response.body);</span><br><span class="line">    <span class="keyword">var</span> itemCount = jsonResponse[<span class="string">'totalItems'</span>];</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"Number of books about http: <span class="subst">$itemCount</span>."</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"Request failed with status: <span class="subst">$&#123;response.statusCode&#125;</span>."</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>或者使用如下方式：<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'dart:convert'</span> <span class="keyword">as</span> convert;</span><br><span class="line"><span class="keyword">import</span> <span class="string">'package:http/http.dart'</span> <span class="keyword">as</span> http;</span><br><span class="line"></span><br><span class="line">httpRequestGet() &#123;</span><br><span class="line">  <span class="keyword">var</span> url = <span class="string">'http://tj.nineton.cn/Heart/index/all?city=CHSH000000&amp;language=zh-chs'</span>;</span><br><span class="line">  http.Client().<span class="keyword">get</span>(url).then((http.Response response) &#123;</span><br><span class="line">    <span class="keyword">if</span> (response.statusCode == <span class="number">200</span>) &#123;</span><br><span class="line">      <span class="keyword">var</span> jsonResponse = convert.jsonDecode(response.body);</span><br><span class="line">      <span class="keyword">var</span> itemCount = jsonResponse[<span class="string">'totalItems'</span>];</span><br><span class="line">      <span class="built_in">print</span>(<span class="string">"Number of books about http: <span class="subst">$itemCount</span>."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul><h3 id="POST-请求"><a href="#POST-请求" class="headerlink" title="POST 请求"></a><code>POST</code> 请求</h3><ul><li><p>与 <code>GET</code> 请求不同的是，<code>POST</code> 请求需要将数据写入到 <code>body</code> 里面：</p><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'dart:convert'</span> <span class="keyword">as</span> convert;</span><br><span class="line"><span class="keyword">import</span> <span class="string">'package:http/http.dart'</span> <span class="keyword">as</span> http;</span><br><span class="line"></span><br><span class="line">httpRequestPost() <span class="keyword">async</span> &#123;</span><br><span class="line">  <span class="keyword">var</span> url = <span class="string">"request_url"</span>;</span><br><span class="line">  <span class="keyword">var</span> params = <span class="keyword">new</span> <span class="built_in">Map</span>&lt;<span class="built_in">String</span>, <span class="built_in">String</span>&gt;();</span><br><span class="line">  params[<span class="string">'param_1'</span>] = <span class="string">"value_1"</span>;</span><br><span class="line">  params[<span class="string">'param_2'</span>] = <span class="string">"value_2"</span>;</span><br><span class="line">  params[<span class="string">'param_3'</span>] = <span class="string">"value_3"</span>;</span><br><span class="line">  <span class="keyword">var</span> client = http.Client();</span><br><span class="line">  http.Response response = <span class="keyword">await</span> client.post(url, body: params);</span><br><span class="line">  <span class="keyword">if</span> (response.statusCode == <span class="number">200</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> responseMessage = response.body;</span><br><span class="line">    <span class="built_in">print</span>(responseMessage);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>同样的，上述请求也可以使用如下代码实现：<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">import</span> <span class="string">'dart:convert'</span> <span class="keyword">as</span> convert;</span><br><span class="line"> <span class="keyword">import</span> <span class="string">'package:http/http.dart'</span> <span class="keyword">as</span> http;</span><br><span class="line"></span><br><span class="line">httpRequestPost() &#123;</span><br><span class="line">   <span class="keyword">var</span> url = <span class="string">"request_url"</span>;</span><br><span class="line">   <span class="keyword">var</span> params = <span class="keyword">new</span> <span class="built_in">Map</span>&lt;<span class="built_in">String</span>, <span class="built_in">String</span>&gt;();</span><br><span class="line">   params[<span class="string">'param_1'</span>] = <span class="string">"value_1"</span>;</span><br><span class="line">   params[<span class="string">'param_2'</span>] = <span class="string">"value_2"</span>;</span><br><span class="line">   params[<span class="string">'param_3'</span>] = <span class="string">"value_3"</span>;</span><br><span class="line">   http.Client().post(url, body: params).then((http.Response response) &#123;</span><br><span class="line">     <span class="keyword">if</span> (response.statusCode == <span class="number">200</span>) &#123;</span><br><span class="line">       <span class="keyword">var</span> responseMessage = response.body;</span><br><span class="line">       <span class="built_in">print</span>(responseMessage);</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></li></ul></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;原生走一波&quot;&gt;&lt;a href=&quot;#原生走一波&quot; class=&quot;headerlink&quot; title=&quot;原生走一波&quot;&gt;&lt;/a&gt;原生走一波&lt;/h3&gt;
+        &lt;h3 id=&quot;使用第三方库&quot;&gt;&lt;a href=&quot;#使用第三方库&quot; class=&quot;headerlink&quot; title=&quot;使用第三方库&quot;&gt;&lt;/a&gt;使用第三方库&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://pub.dev/&quot; target=&quot;_blank&quot; rel=&quot;noopen
       
     
     </summary>
     
-      <category term="小程序" scheme="18600917746.github.io/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+      <category term="App" scheme="https://18600917746.github.io/categories/App/"/>
+    
+      <category term="Flutter" scheme="https://18600917746.github.io/categories/App/Flutter/"/>
+    
+      <category term="Http" scheme="https://18600917746.github.io/categories/App/Flutter/Http/"/>
     
     
-      <category term="小程序" scheme="18600917746.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+      <category term="App" scheme="https://18600917746.github.io/tags/App/"/>
+    
+      <category term="Flutter" scheme="https://18600917746.github.io/tags/Flutter/"/>
     
   </entry>
   
   <entry>
-    <title></title>
-    <link href="18600917746.github.io/2019/05/20/hello-axios/"/>
-    <id>18600917746.github.io/2019/05/20/hello-axios/</id>
-    <published>2019-05-20T02:57:20.715Z</published>
-    <updated>2019-05-20T02:57:20.715Z</updated>
+    <title>hello-flutter-routes</title>
+    <link href="https://18600917746.github.io/2019/05/30/hello-flutter-routes/"/>
+    <id>https://18600917746.github.io/2019/05/30/hello-flutter-routes/</id>
+    <published>2019-05-30T06:55:26.000Z</published>
+    <updated>2019-05-30T11:24:13.575Z</updated>
     
-    <content type="html"><![CDATA[<hr><p>title: hello-axios<br>author:<br>  nick: cheng<br>date: 2019-05-20 10:50:45<br>subtitle: ‘’<br>categories:</p><ul><li>Axios<br>cover: ‘’<br>tags:</li><li>Ajax</li><li>Axios</li></ul><hr><h3 id="1、axios-发-post-请求，后端接收不到参数的解决方案"><a href="#1、axios-发-post-请求，后端接收不到参数的解决方案" class="headerlink" title="1、axios 发 post 请求，后端接收不到参数的解决方案"></a>1、axios 发 post 请求，后端接收不到参数的解决方案</h3><h3 id="2、接收二进制数据"><a href="#2、接收二进制数据" class="headerlink" title="2、接收二进制数据"></a>2、接收二进制数据</h3>]]></content>
+    <content type="html"><![CDATA[<h3 id="Navigator提供了操作-Routes-的两种方法：-Navigator-push-和-Navigator-pop。"><a href="#Navigator提供了操作-Routes-的两种方法：-Navigator-push-和-Navigator-pop。" class="headerlink" title="Navigator提供了操作 Routes 的两种方法： Navigator.push 和 Navigator.pop。"></a>Navigator提供了操作 Routes 的两种方法： Navigator.push 和 Navigator.pop。</h3><ul><li>Navigator.pushNamed<ul><li>使用 <code>Navigator.pushNamed</code> 方法的 <code>arguments</code> 来传递参数</li><li>使用 <code>ModalRoute</code> 接收数据<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Navigator.pushNamed(context, <span class="string">'/Citys'</span>,arguments: curCity);</span><br></pre></td></tr></table></figure></li></ul></li></ul><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ModalRoute.of(context).settings.arguments</span><br></pre></td></tr></table></figure><ul><li>Navigator.pop<h3 id="在-Flutter-中获取-Navigator-的实例"><a href="#在-Flutter-中获取-Navigator-的实例" class="headerlink" title="在 Flutter 中获取 Navigator 的实例"></a>在 Flutter 中获取 Navigator 的实例</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Navigator.of(context);</span><br></pre></td></tr></table></figure></li></ul><h3 id="路由数据传递"><a href="#路由数据传递" class="headerlink" title="路由数据传递"></a>路由数据传递</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">InheritedWidget</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;hr&gt;
-&lt;p&gt;title: hello-axios&lt;br&gt;author:&lt;br&gt;  nick: cheng&lt;br&gt;date: 2019-05-20 10:50:45&lt;br&gt;subtitle: ‘’&lt;br&gt;categories:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Axios&lt;br&gt;cov
+        &lt;h3 id=&quot;Navigator提供了操作-Routes-的两种方法：-Navigator-push-和-Navigator-pop。&quot;&gt;&lt;a href=&quot;#Navigator提供了操作-Routes-的两种方法：-Navigator-push-和-Navigator-pop。
       
     
     </summary>
     
+      <category term="App" scheme="https://18600917746.github.io/categories/App/"/>
+    
+      <category term="Flutter" scheme="https://18600917746.github.io/categories/App/Flutter/"/>
+    
+      <category term="Routes" scheme="https://18600917746.github.io/categories/App/Flutter/Routes/"/>
+    
+    
+      <category term="App" scheme="https://18600917746.github.io/tags/App/"/>
+    
+      <category term="Flutter" scheme="https://18600917746.github.io/tags/Flutter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hello-flutter-icon</title>
+    <link href="https://18600917746.github.io/2019/05/24/hello-flutter-icon/"/>
+    <id>https://18600917746.github.io/2019/05/24/hello-flutter-icon/</id>
+    <published>2019-05-24T08:12:51.000Z</published>
+    <updated>2019-05-24T08:14:32.125Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="第三方-icon-使用"><a href="#第三方-icon-使用" class="headerlink" title="第三方 icon 使用"></a>第三方 <code>icon</code> 使用</h2><p><a href="http://fluttericon.com/" target="_blank" rel="noopener">fluttericon</a></p><h3 id="使用教程"><a href="#使用教程" class="headerlink" title="使用教程"></a>使用教程</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;第三方-icon-使用&quot;&gt;&lt;a href=&quot;#第三方-icon-使用&quot; class=&quot;headerlink&quot; title=&quot;第三方 icon 使用&quot;&gt;&lt;/a&gt;第三方 &lt;code&gt;icon&lt;/code&gt; 使用&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://flutt
+      
+    
+    </summary>
+    
+      <category term="App" scheme="https://18600917746.github.io/categories/App/"/>
+    
+      <category term="Flutter" scheme="https://18600917746.github.io/categories/App/Flutter/"/>
+    
+      <category term="Icon" scheme="https://18600917746.github.io/categories/App/Flutter/Icon/"/>
+    
+    
+      <category term="App" scheme="https://18600917746.github.io/tags/App/"/>
+    
+      <category term="Flutter" scheme="https://18600917746.github.io/tags/Flutter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hello-小程序</title>
+    <link href="https://18600917746.github.io/2019/05/23/hello-%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    <id>https://18600917746.github.io/2019/05/23/hello-小程序/</id>
+    <published>2019-05-23T07:35:43.000Z</published>
+    <updated>2019-05-23T09:12:23.753Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="原生走一波"><a href="#原生走一波" class="headerlink" title="原生走一波"></a>原生走一波</h3><blockquote><ol><li>安装开发工具</li></ol></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><blockquote><ol start="2"><li>【测试号】创建项目</li></ol></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;原生走一波&quot;&gt;&lt;a href=&quot;#原生走一波&quot; class=&quot;headerlink&quot; title=&quot;原生走一波&quot;&gt;&lt;/a&gt;原生走一波&lt;/h3&gt;&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;安装开发工具&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;figure
+      
+    
+    </summary>
+    
+      <category term="小程序" scheme="https://18600917746.github.io/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+      <category term="原生" scheme="https://18600917746.github.io/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%8E%9F%E7%94%9F/"/>
+    
+    
+      <category term="小程序" scheme="https://18600917746.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hello-axios</title>
+    <link href="https://18600917746.github.io/2019/05/20/hello-axios/"/>
+    <id>https://18600917746.github.io/2019/05/20/hello-axios/</id>
+    <published>2019-05-20T02:50:45.000Z</published>
+    <updated>2019-05-23T07:41:17.811Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1、axios-发-post-请求，后端接收不到参数的解决方案"><a href="#1、axios-发-post-请求，后端接收不到参数的解决方案" class="headerlink" title="1、axios 发 post 请求，后端接收不到参数的解决方案"></a>1、axios 发 post 请求，后端接收不到参数的解决方案</h3><h3 id="2、接收二进制数据"><a href="#2、接收二进制数据" class="headerlink" title="2、接收二进制数据"></a>2、接收二进制数据</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1、axios-发-post-请求，后端接收不到参数的解决方案&quot;&gt;&lt;a href=&quot;#1、axios-发-post-请求，后端接收不到参数的解决方案&quot; class=&quot;headerlink&quot; title=&quot;1、axios 发 post 请求，后端接收不到参数的解决方
+      
+    
+    </summary>
+    
+      <category term="Axios" scheme="https://18600917746.github.io/categories/Axios/"/>
+    
+    
+      <category term="Ajax" scheme="https://18600917746.github.io/tags/Ajax/"/>
+    
+      <category term="Axios" scheme="https://18600917746.github.io/tags/Axios/"/>
     
   </entry>
   
   <entry>
     <title>hello-cordova-platforms</title>
-    <link href="18600917746.github.io/2019/05/16/hello-cordova-platforms/"/>
-    <id>18600917746.github.io/2019/05/16/hello-cordova-platforms/</id>
+    <link href="https://18600917746.github.io/2019/05/16/hello-cordova-platforms/"/>
+    <id>https://18600917746.github.io/2019/05/16/hello-cordova-platforms/</id>
     <published>2019-05-16T03:18:11.000Z</published>
     <updated>2019-05-16T03:38:30.470Z</updated>
     
@@ -83,23 +186,23 @@
     
     </summary>
     
-      <category term="App" scheme="18600917746.github.io/categories/App/"/>
+      <category term="App" scheme="https://18600917746.github.io/categories/App/"/>
     
-      <category term="Cordova" scheme="18600917746.github.io/categories/App/Cordova/"/>
+      <category term="Cordova" scheme="https://18600917746.github.io/categories/App/Cordova/"/>
     
-      <category term="Platforms" scheme="18600917746.github.io/categories/App/Cordova/Platforms/"/>
+      <category term="Platforms" scheme="https://18600917746.github.io/categories/App/Cordova/Platforms/"/>
     
     
-      <category term="App" scheme="18600917746.github.io/tags/App/"/>
+      <category term="App" scheme="https://18600917746.github.io/tags/App/"/>
     
-      <category term="Cordova" scheme="18600917746.github.io/tags/Cordova/"/>
+      <category term="Cordova" scheme="https://18600917746.github.io/tags/Cordova/"/>
     
   </entry>
   
   <entry>
     <title>hello-cordova-plugin</title>
-    <link href="18600917746.github.io/2019/05/16/hello-cordova-plugin/"/>
-    <id>18600917746.github.io/2019/05/16/hello-cordova-plugin/</id>
+    <link href="https://18600917746.github.io/2019/05/16/hello-cordova-plugin/"/>
+    <id>https://18600917746.github.io/2019/05/16/hello-cordova-plugin/</id>
     <published>2019-05-16T01:39:31.000Z</published>
     <updated>2019-05-16T07:04:58.549Z</updated>
     
@@ -117,23 +220,23 @@
     
     </summary>
     
-      <category term="App" scheme="18600917746.github.io/categories/App/"/>
+      <category term="App" scheme="https://18600917746.github.io/categories/App/"/>
     
-      <category term="Cordova" scheme="18600917746.github.io/categories/App/Cordova/"/>
+      <category term="Cordova" scheme="https://18600917746.github.io/categories/App/Cordova/"/>
     
-      <category term="Plugin" scheme="18600917746.github.io/categories/App/Cordova/Plugin/"/>
+      <category term="Plugin" scheme="https://18600917746.github.io/categories/App/Cordova/Plugin/"/>
     
     
-      <category term="App" scheme="18600917746.github.io/tags/App/"/>
+      <category term="App" scheme="https://18600917746.github.io/tags/App/"/>
     
-      <category term="Cordova" scheme="18600917746.github.io/tags/Cordova/"/>
+      <category term="Cordova" scheme="https://18600917746.github.io/tags/Cordova/"/>
     
   </entry>
   
   <entry>
     <title>搭建svn与git服务器</title>
-    <link href="18600917746.github.io/2019/04/17/%E6%90%AD%E5%BB%BAsvn%E4%B8%8Egit%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    <id>18600917746.github.io/2019/04/17/搭建svn与git服务器/</id>
+    <link href="https://18600917746.github.io/2019/04/17/%E6%90%AD%E5%BB%BAsvn%E4%B8%8Egit%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <id>https://18600917746.github.io/2019/04/17/搭建svn与git服务器/</id>
     <published>2019-04-17T13:17:37.000Z</published>
     <updated>2019-04-17T14:16:40.871Z</updated>
     
@@ -151,21 +254,21 @@
     
     </summary>
     
-      <category term="茶余饭后" scheme="18600917746.github.io/categories/%E8%8C%B6%E4%BD%99%E9%A5%AD%E5%90%8E/"/>
+      <category term="茶余饭后" scheme="https://18600917746.github.io/categories/%E8%8C%B6%E4%BD%99%E9%A5%AD%E5%90%8E/"/>
     
-      <category term="jsCode" scheme="18600917746.github.io/categories/%E8%8C%B6%E4%BD%99%E9%A5%AD%E5%90%8E/jsCode/"/>
+      <category term="jsCode" scheme="https://18600917746.github.io/categories/%E8%8C%B6%E4%BD%99%E9%A5%AD%E5%90%8E/jsCode/"/>
     
     
-      <category term="Git 服务器" scheme="18600917746.github.io/tags/Git-%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <category term="Git 服务器" scheme="https://18600917746.github.io/tags/Git-%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
-      <category term="Svn 服务器" scheme="18600917746.github.io/tags/Svn-%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <category term="Svn 服务器" scheme="https://18600917746.github.io/tags/Svn-%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
   </entry>
   
   <entry>
     <title>ie低版本浏览器不兼容提示</title>
-    <link href="18600917746.github.io/2019/04/17/ie%E4%BD%8E%E7%89%88%E6%9C%AC%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8D%E5%85%BC%E5%AE%B9%E6%8F%90%E7%A4%BA/"/>
-    <id>18600917746.github.io/2019/04/17/ie低版本浏览器不兼容提示/</id>
+    <link href="https://18600917746.github.io/2019/04/17/ie%E4%BD%8E%E7%89%88%E6%9C%AC%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8D%E5%85%BC%E5%AE%B9%E6%8F%90%E7%A4%BA/"/>
+    <id>https://18600917746.github.io/2019/04/17/ie低版本浏览器不兼容提示/</id>
     <published>2019-04-17T12:46:32.000Z</published>
     <updated>2019-04-17T12:48:03.937Z</updated>
     
@@ -180,19 +283,19 @@
     
     </summary>
     
-      <category term="茶余饭后" scheme="18600917746.github.io/categories/%E8%8C%B6%E4%BD%99%E9%A5%AD%E5%90%8E/"/>
+      <category term="茶余饭后" scheme="https://18600917746.github.io/categories/%E8%8C%B6%E4%BD%99%E9%A5%AD%E5%90%8E/"/>
     
-      <category term="jsCode" scheme="18600917746.github.io/categories/%E8%8C%B6%E4%BD%99%E9%A5%AD%E5%90%8E/jsCode/"/>
+      <category term="jsCode" scheme="https://18600917746.github.io/categories/%E8%8C%B6%E4%BD%99%E9%A5%AD%E5%90%8E/jsCode/"/>
     
     
-      <category term="jsCode" scheme="18600917746.github.io/tags/jsCode/"/>
+      <category term="jsCode" scheme="https://18600917746.github.io/tags/jsCode/"/>
     
   </entry>
   
   <entry>
     <title>hello-hash</title>
-    <link href="18600917746.github.io/2019/04/14/hello-hash/"/>
-    <id>18600917746.github.io/2019/04/14/hello-hash/</id>
+    <link href="https://18600917746.github.io/2019/04/14/hello-hash/"/>
+    <id>https://18600917746.github.io/2019/04/14/hello-hash/</id>
     <published>2019-04-14T13:20:52.000Z</published>
     <updated>2019-04-14T13:34:40.111Z</updated>
     
@@ -207,19 +310,19 @@
     
     </summary>
     
-      <category term="前端" scheme="18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="hello" scheme="18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/hello/"/>
+      <category term="hello" scheme="https://18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/hello/"/>
     
     
-      <category term="Hash" scheme="18600917746.github.io/tags/Hash/"/>
+      <category term="Hash" scheme="https://18600917746.github.io/tags/Hash/"/>
     
   </entry>
   
   <entry>
     <title>vue-Vuex</title>
-    <link href="18600917746.github.io/2019/04/01/vue-Vuex/"/>
-    <id>18600917746.github.io/2019/04/01/vue-Vuex/</id>
+    <link href="https://18600917746.github.io/2019/04/01/vue-Vuex/"/>
+    <id>https://18600917746.github.io/2019/04/01/vue-Vuex/</id>
     <published>2019-04-01T08:24:04.000Z</published>
     <updated>2019-04-01T10:15:12.920Z</updated>
     
@@ -234,19 +337,19 @@
     
     </summary>
     
-      <category term="前端" scheme="18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="vue" scheme="18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/vue/"/>
+      <category term="vue" scheme="https://18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/vue/"/>
     
     
-      <category term="Vuex" scheme="18600917746.github.io/tags/Vuex/"/>
+      <category term="Vuex" scheme="https://18600917746.github.io/tags/Vuex/"/>
     
   </entry>
   
   <entry>
     <title>hello-ES6</title>
-    <link href="18600917746.github.io/2019/03/31/hello-ES6/"/>
-    <id>18600917746.github.io/2019/03/31/hello-ES6/</id>
+    <link href="https://18600917746.github.io/2019/03/31/hello-ES6/"/>
+    <id>https://18600917746.github.io/2019/03/31/hello-ES6/</id>
     <published>2019-03-31T04:18:48.000Z</published>
     <updated>2019-03-31T04:19:42.118Z</updated>
     
@@ -262,19 +365,19 @@
     
     </summary>
     
-      <category term="前端" scheme="18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="hello" scheme="18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/hello/"/>
+      <category term="hello" scheme="https://18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/hello/"/>
     
     
-      <category term="ES6" scheme="18600917746.github.io/tags/ES6/"/>
+      <category term="ES6" scheme="https://18600917746.github.io/tags/ES6/"/>
     
   </entry>
   
   <entry>
     <title>hello-webScoket</title>
-    <link href="18600917746.github.io/2019/03/31/hello-webScoket/"/>
-    <id>18600917746.github.io/2019/03/31/hello-webScoket/</id>
+    <link href="https://18600917746.github.io/2019/03/31/hello-webScoket/"/>
+    <id>https://18600917746.github.io/2019/03/31/hello-webScoket/</id>
     <published>2019-03-31T03:19:02.000Z</published>
     <updated>2019-03-31T04:17:11.707Z</updated>
     
@@ -289,19 +392,19 @@
     
     </summary>
     
-      <category term="前端" scheme="18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="hello" scheme="18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/hello/"/>
+      <category term="hello" scheme="https://18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/hello/"/>
     
     
-      <category term="webScoket" scheme="18600917746.github.io/tags/webScoket/"/>
+      <category term="webScoket" scheme="https://18600917746.github.io/tags/webScoket/"/>
     
   </entry>
   
   <entry>
     <title>hello-formData</title>
-    <link href="18600917746.github.io/2019/03/31/hello-formData/"/>
-    <id>18600917746.github.io/2019/03/31/hello-formData/</id>
+    <link href="https://18600917746.github.io/2019/03/31/hello-formData/"/>
+    <id>https://18600917746.github.io/2019/03/31/hello-formData/</id>
     <published>2019-03-31T02:17:59.000Z</published>
     <updated>2019-03-31T02:34:04.075Z</updated>
     
@@ -316,19 +419,19 @@
     
     </summary>
     
-      <category term="前端" scheme="18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="hello" scheme="18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/hello/"/>
+      <category term="hello" scheme="https://18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/hello/"/>
     
     
-      <category term="formData" scheme="18600917746.github.io/tags/formData/"/>
+      <category term="formData" scheme="https://18600917746.github.io/tags/formData/"/>
     
   </entry>
   
   <entry>
     <title>hello-fetch</title>
-    <link href="18600917746.github.io/2019/03/31/hello-fetch/"/>
-    <id>18600917746.github.io/2019/03/31/hello-fetch/</id>
+    <link href="https://18600917746.github.io/2019/03/31/hello-fetch/"/>
+    <id>https://18600917746.github.io/2019/03/31/hello-fetch/</id>
     <published>2019-03-31T00:57:07.000Z</published>
     <updated>2019-04-06T01:49:32.046Z</updated>
     
@@ -343,21 +446,21 @@
     
     </summary>
     
-      <category term="前端" scheme="18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="hello" scheme="18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/hello/"/>
+      <category term="hello" scheme="https://18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/hello/"/>
     
     
-      <category term="fetch" scheme="18600917746.github.io/tags/fetch/"/>
+      <category term="fetch" scheme="https://18600917746.github.io/tags/fetch/"/>
     
   </entry>
   
   <entry>
     <title>hello-H5</title>
-    <link href="18600917746.github.io/2019/03/18/hello-H5/"/>
-    <id>18600917746.github.io/2019/03/18/hello-H5/</id>
+    <link href="https://18600917746.github.io/2019/03/18/hello-H5/"/>
+    <id>https://18600917746.github.io/2019/03/18/hello-H5/</id>
     <published>2019-03-18T01:08:12.000Z</published>
-    <updated>2019-05-06T09:58:48.122Z</updated>
+    <updated>2019-05-23T09:07:46.576Z</updated>
     
     <content type="html"><![CDATA[<h3 id="什么是-H5"><a href="#什么是-H5" class="headerlink" title="什么是 H5"></a>什么是 <code>H5</code></h3><h4 id="HTML5-桌面通知：Notification-API"><a href="#HTML5-桌面通知：Notification-API" class="headerlink" title="HTML5 桌面通知：Notification API"></a>HTML5 桌面通知：<code>Notification</code> API</h4><blockquote><p>上代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p></blockquote><h3 id="浏览器窗体获得焦点则停止标题闪烁通知-失去焦点则开启标题闪烁通知"><a href="#浏览器窗体获得焦点则停止标题闪烁通知-失去焦点则开启标题闪烁通知" class="headerlink" title="浏览器窗体获得焦点则停止标题闪烁通知+失去焦点则开启标题闪烁通知"></a>浏览器窗体获得焦点则停止标题闪烁通知+失去焦点则开启标题闪烁通知</h3><blockquote><p>上代码</p></blockquote><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> titleInit = <span class="built_in">document</span>.title, isShine = <span class="literal">true</span>;</span><br><span class="line">setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> title = <span class="built_in">document</span>.title;</span><br><span class="line">    <span class="keyword">if</span> (isShine == <span class="literal">true</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="regexp">/新/</span>.test(title) == <span class="literal">false</span>) &#123;</span><br><span class="line">            <span class="built_in">document</span>.title = <span class="string">'【你有新消息】'</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">document</span>.title = <span class="string">'【　　　　　】'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">document</span>.title = titleInit;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;, <span class="number">500</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// for Chrome and FireFox</span></span><br><span class="line"><span class="built_in">window</span>.onfocus = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">123</span>);</span><br><span class="line">    isShine = <span class="literal">false</span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">window</span>.onblur = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    isShine = <span class="literal">true</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// for IE</span></span><br><span class="line"><span class="built_in">document</span>.onfocusin = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    isShine = <span class="literal">false</span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">document</span>.onfocusout = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    isShine = <span class="literal">true</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -370,17 +473,19 @@
     
     </summary>
     
-      <category term="你真的知道这些 H5 吗？你还以为是简简单单的几个标签？" scheme="18600917746.github.io/categories/%E4%BD%A0%E7%9C%9F%E7%9A%84%E7%9F%A5%E9%81%93%E8%BF%99%E4%BA%9B-H5-%E5%90%97%EF%BC%9F%E4%BD%A0%E8%BF%98%E4%BB%A5%E4%B8%BA%E6%98%AF%E7%AE%80%E7%AE%80%E5%8D%95%E5%8D%95%E7%9A%84%E5%87%A0%E4%B8%AA%E6%A0%87%E7%AD%BE%EF%BC%9F/"/>
+      <category term="前端" scheme="https://18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="H5" scheme="https://18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/H5/"/>
     
     
-      <category term="H5" scheme="18600917746.github.io/tags/H5/"/>
+      <category term="H5" scheme="https://18600917746.github.io/tags/H5/"/>
     
   </entry>
   
   <entry>
     <title>web静态站点布置</title>
-    <link href="18600917746.github.io/2019/03/11/web%E9%9D%99%E6%80%81%E7%AB%99%E7%82%B9%E5%B8%83%E7%BD%AE/"/>
-    <id>18600917746.github.io/2019/03/11/web静态站点布置/</id>
+    <link href="https://18600917746.github.io/2019/03/11/web%E9%9D%99%E6%80%81%E7%AB%99%E7%82%B9%E5%B8%83%E7%BD%AE/"/>
+    <id>https://18600917746.github.io/2019/03/11/web静态站点布置/</id>
     <published>2019-03-11T04:09:50.000Z</published>
     <updated>2019-03-13T01:55:25.470Z</updated>
     
@@ -397,25 +502,25 @@
     
     </summary>
     
-      <category term="后端" scheme="18600917746.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
+      <category term="后端" scheme="https://18600917746.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
     
-      <category term="hello" scheme="18600917746.github.io/categories/%E5%90%8E%E7%AB%AF/hello/"/>
+      <category term="hello" scheme="https://18600917746.github.io/categories/%E5%90%8E%E7%AB%AF/hello/"/>
     
     
-      <category term="Nginx" scheme="18600917746.github.io/tags/Nginx/"/>
+      <category term="Nginx" scheme="https://18600917746.github.io/tags/Nginx/"/>
     
-      <category term="Apache" scheme="18600917746.github.io/tags/Apache/"/>
+      <category term="Apache" scheme="https://18600917746.github.io/tags/Apache/"/>
     
-      <category term="Tomcat" scheme="18600917746.github.io/tags/Tomcat/"/>
+      <category term="Tomcat" scheme="https://18600917746.github.io/tags/Tomcat/"/>
     
-      <category term="Node" scheme="18600917746.github.io/tags/Node/"/>
+      <category term="Node" scheme="https://18600917746.github.io/tags/Node/"/>
     
   </entry>
   
   <entry>
     <title>hello-meta</title>
-    <link href="18600917746.github.io/2019/03/06/hello-meta/"/>
-    <id>18600917746.github.io/2019/03/06/hello-meta/</id>
+    <link href="https://18600917746.github.io/2019/03/06/hello-meta/"/>
+    <id>https://18600917746.github.io/2019/03/06/hello-meta/</id>
     <published>2019-03-06T05:27:31.000Z</published>
     <updated>2019-03-06T09:51:13.430Z</updated>
     
@@ -430,19 +535,19 @@
     
     </summary>
     
-      <category term="前端" scheme="18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="hello" scheme="18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/hello/"/>
+      <category term="hello" scheme="https://18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/hello/"/>
     
     
-      <category term="meta" scheme="18600917746.github.io/tags/meta/"/>
+      <category term="meta" scheme="https://18600917746.github.io/tags/meta/"/>
     
   </entry>
   
   <entry>
     <title>hello-测试</title>
-    <link href="18600917746.github.io/2019/02/27/hello-%E6%B5%8B%E8%AF%95/"/>
-    <id>18600917746.github.io/2019/02/27/hello-测试/</id>
+    <link href="https://18600917746.github.io/2019/02/27/hello-%E6%B5%8B%E8%AF%95/"/>
+    <id>https://18600917746.github.io/2019/02/27/hello-测试/</id>
     <published>2019-02-27T06:52:41.000Z</published>
     <updated>2019-02-27T07:01:34.571Z</updated>
     
@@ -468,19 +573,19 @@
     
     </summary>
     
-      <category term="测试" scheme="18600917746.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
+      <category term="测试" scheme="https://18600917746.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
     
-      <category term="hello" scheme="18600917746.github.io/categories/%E6%B5%8B%E8%AF%95/hello/"/>
+      <category term="hello" scheme="https://18600917746.github.io/categories/%E6%B5%8B%E8%AF%95/hello/"/>
     
     
-      <category term="测试" scheme="18600917746.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+      <category term="测试" scheme="https://18600917746.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>hello-shelljs</title>
-    <link href="18600917746.github.io/2019/02/25/hello-shelljs/"/>
-    <id>18600917746.github.io/2019/02/25/hello-shelljs/</id>
+    <link href="https://18600917746.github.io/2019/02/25/hello-shelljs/"/>
+    <id>https://18600917746.github.io/2019/02/25/hello-shelljs/</id>
     <published>2019-02-25T09:22:51.000Z</published>
     <updated>2019-02-25T09:25:04.907Z</updated>
     
@@ -495,94 +600,12 @@
     
     </summary>
     
-      <category term="前端" scheme="18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="hello" scheme="18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/hello/"/>
-    
-    
-      <category term="shelljs" scheme="18600917746.github.io/tags/shelljs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hello-charles</title>
-    <link href="18600917746.github.io/2019/02/22/hello-charles/"/>
-    <id>18600917746.github.io/2019/02/22/hello-charles/</id>
-    <published>2019-02-22T06:47:26.000Z</published>
-    <updated>2019-03-14T06:12:35.065Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="charles"><a href="#charles" class="headerlink" title="charles"></a><a href="https://mp.weixin.qq.com/s/9qRcbhW_lW9CMd0hjaT51A" target="_blank" rel="noopener"><code>charles</code></a></h3><h3 id="Fiddler"><a href="#Fiddler" class="headerlink" title="Fiddler"></a><a href="https://www.jianshu.com/p/89a04742553b?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation" target="_blank" rel="noopener"><code>Fiddler</code></a></h3>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;charles&quot;&gt;&lt;a href=&quot;#charles&quot; class=&quot;headerlink&quot; title=&quot;charles&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/9qRcbhW_lW9CMd0hjaT51A&quot; targe
-      
-    
-    </summary>
-    
-      <category term="测试" scheme="18600917746.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
-    
-      <category term="hello" scheme="18600917746.github.io/categories/%E6%B5%8B%E8%AF%95/hello/"/>
+      <category term="hello" scheme="https://18600917746.github.io/categories/%E5%89%8D%E7%AB%AF/hello/"/>
     
     
-      <category term="charles" scheme="18600917746.github.io/tags/charles/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hello-Bugfree</title>
-    <link href="18600917746.github.io/2019/02/21/hello-Bugfree/"/>
-    <id>18600917746.github.io/2019/02/21/hello-Bugfree/</id>
-    <published>2019-02-21T06:38:18.000Z</published>
-    <updated>2019-02-21T08:07:38.186Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="测试环境搭建之-Bugfree-部署"><a href="#测试环境搭建之-Bugfree-部署" class="headerlink" title="测试环境搭建之 Bugfree 部署"></a>测试环境搭建之 Bugfree 部署</h3><h4 id="测试环境是什么"><a href="#测试环境是什么" class="headerlink" title="测试环境是什么"></a>测试环境是什么</h4><ul><li>测试环境<ul><li>测试环境 = 软件环境 + 硬件环境 + 网络环境 + 测试数据 + 测试工具</li><li>真实、干净、无毒、 独立</li><li>模拟真实用户真实的使用场景</li></ul></li><li>软件环境：web服务器、操作系统、数据库管理系统、其他的应用软件</li><li>硬件环境：服务器、客户端、网络连接设备等</li></ul><h4 id="查看系统的位数"><a href="#查看系统的位数" class="headerlink" title="查看系统的位数"></a>查看系统的位数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -a</span><br></pre></td></tr></table></figure><h4 id="bugfree-管理系统的创建"><a href="#bugfree-管理系统的创建" class="headerlink" title="bugfree 管理系统的创建"></a>bugfree 管理系统的创建</h4><ol><li>使用 <code>xshell</code> 连接远程端</li><li>使用 <code>xftp</code> 上传你下载的 <code>xampp.run</code> 执行文件 </li><li>使用 <code>chmod 777 -R xampp.run</code> 来修改文件的操作权限</li><li>执行文件进行文件下载 <code>./xampp.run</code></li><li>在 <code>lampp/htdoc</code> 下创建 <code>BugFlie</code> 文件夹</li><li>将 <code>bugfree</code> 文件上传至 <code>lampp/htdoc</code> 文件夹下</li><li>启动服务 <code>./xampp start</code></li><li>通过 ip 地址进项访问 <code>xxx.xxx.xx.xx/bugfree</code></li></ol><h4 id="禅道-管理系统的创建"><a href="#禅道-管理系统的创建" class="headerlink" title="禅道 管理系统的创建"></a>禅道 管理系统的创建</h4><ol><li>使用 <code>xshell</code> 连接远程端</li><li>直接将 <code>禅道安装包</code> 放置 <code>/opt</code> 然后进行解压</li><li>直接进行 <code>zbox start</code></li><li>通过 ip 地址进项访问 <code>xxx.xxx.xx.xx</code></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;测试环境搭建之-Bugfree-部署&quot;&gt;&lt;a href=&quot;#测试环境搭建之-Bugfree-部署&quot; class=&quot;headerlink&quot; title=&quot;测试环境搭建之 Bugfree 部署&quot;&gt;&lt;/a&gt;测试环境搭建之 Bugfree 部署&lt;/h3&gt;&lt;h4 id=&quot;测
-      
-    
-    </summary>
-    
-      <category term="测试" scheme="18600917746.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
-    
-      <category term="hello" scheme="18600917746.github.io/categories/%E6%B5%8B%E8%AF%95/hello/"/>
-    
-    
-      <category term="Bugfree" scheme="18600917746.github.io/tags/Bugfree/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hello-pm2</title>
-    <link href="18600917746.github.io/2019/02/20/hello-pm2/"/>
-    <id>18600917746.github.io/2019/02/20/hello-pm2/</id>
-    <published>2019-02-20T10:57:23.000Z</published>
-    <updated>2019-04-28T07:51:57.602Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="为什么使用pm2"><a href="#为什么使用pm2" class="headerlink" title="为什么使用pm2"></a>为什么使用pm2</h3><ul><li>pm2 是一个带有负载均衡功能的Node应用的进程管理器.当你要把你的独立代码利用全部的服务器上的所有CPU，并保证进程永远都活着，0秒的重载， PM2是完美的。它非常适合IaaS结构，但不要把它用于PaaS方案。</li><li><a href="http://www.ruanyifeng.com/blog/2017/07/iaas-paas-saas.html" target="_blank" rel="noopener">iaas-paas-saas</a></li></ul><h3 id="pm2"><a href="#pm2" class="headerlink" title="pm2"></a><a href="https://pm2.io/doc/zh/runtime/overview/" target="_blank" rel="noopener"><code>pm2</code></a></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;为什么使用pm2&quot;&gt;&lt;a href=&quot;#为什么使用pm2&quot; class=&quot;headerlink&quot; title=&quot;为什么使用pm2&quot;&gt;&lt;/a&gt;为什么使用pm2&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;pm2 是一个带有负载均衡功能的Node应用的进程管理器.当你要把你的独立代码利
-      
-    
-    </summary>
-    
-      <category term="后端" scheme="18600917746.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-      <category term="hello" scheme="18600917746.github.io/categories/%E5%90%8E%E7%AB%AF/hello/"/>
-    
-    
-      <category term="pm2" scheme="18600917746.github.io/tags/pm2/"/>
+      <category term="shelljs" scheme="https://18600917746.github.io/tags/shelljs/"/>
     
   </entry>
   
