@@ -2,6 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://18600917746.github.io/2019/10/16/hello-nginx/</loc>
+    
+    <lastmod>2019-10-16T11:31:43.614Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://18600917746.github.io/2019/01/24/hello-vue/</loc>
+    
+    <lastmod>2019-10-07T03:37:37.097Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://18600917746.github.io/2019/07/31/hello-gulp/</loc>
+    
+    <lastmod>2019-10-06T04:02:07.045Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://18600917746.github.io/2019/10/05/js%E6%8E%92%E5%BA%8F/</loc>
+    
+    <lastmod>2019-10-05T08:45:50.082Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://18600917746.github.io/2019/10/04/ECMAscript%E7%89%88%E6%9C%AC%E4%BB%A5%E5%8F%8A%E5%86%85%E5%AE%B9/</loc>
+    
+    <lastmod>2019-10-04T06:22:01.434Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://18600917746.github.io/2019/03/31/hello-ES6/</loc>
+    
+    <lastmod>2019-10-04T06:05:28.406Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://18600917746.github.io/2019/01/28/hello-git/</loc>
+    
+    <lastmod>2019-08-30T02:52:48.449Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://18600917746.github.io/2019/02/22/hello-charles/</loc>
     
     <lastmod>2019-08-26T08:31:18.464Z</lastmod>
@@ -47,13 +96,6 @@
     <loc>https://18600917746.github.io/2019/08/02/hello-webpack/</loc>
     
     <lastmod>2019-08-05T10:19:18.640Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://18600917746.github.io/2019/07/31/hello-gulp/</loc>
-    
-    <lastmod>2019-08-02T07:15:40.196Z</lastmod>
     
   </url>
   
@@ -177,13 +219,6 @@
   </url>
   
   <url>
-    <loc>https://18600917746.github.io/2019/01/28/hello-git/</loc>
-    
-    <lastmod>2019-04-17T12:32:29.615Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://18600917746.github.io/2019/04/14/hello-hash/</loc>
     
     <lastmod>2019-04-14T13:34:40.111Z</lastmod>
@@ -208,13 +243,6 @@
     <loc>https://18600917746.github.io/2019/03/31/hello-fetch/</loc>
     
     <lastmod>2019-04-06T01:49:32.046Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://18600917746.github.io/2019/03/31/hello-ES6/</loc>
-    
-    <lastmod>2019-03-31T04:19:42.118Z</lastmod>
     
   </url>
   
@@ -348,13 +376,6 @@
     <loc>https://18600917746.github.io/2019/01/23/super-css/</loc>
     
     <lastmod>2019-01-28T04:01:14.244Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://18600917746.github.io/2019/01/24/hello-vue/</loc>
-    
-    <lastmod>2019-01-28T04:01:00.474Z</lastmod>
     
   </url>
   
